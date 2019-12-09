@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
+  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameMain.cs">
+    <Files>
+      <File FileName="src\GameMain.cs" Line="60" Column="37" />
+      <File FileName="ShapeTest.cs" Line="68" Column="31" />
+      <File FileName="Drawing.cs" Line="79" Column="7" />
+      <File FileName="DrawingTest.cs" Line="36" Column="37" />
+      <File FileName="src\Shape.cs" Line="38" Column="3" />
+      <File FileName="Rectangle.cs" Line="38" Column="18" />
+      <File FileName="Circle.cs" Line="37" Column="4" />
+      <File FileName="Line.cs" Line="11" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
