@@ -6,10 +6,22 @@ namespace MyGame
 {
 	public class Splitter : Enemy
 	{
+		/// <summary>
+		/// The split timer.
+		/// </summary>
         private int _splitTimer;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:MyGame.Splitter"/> class.
+		/// </summary>
         public Splitter() : this(200, 200) { }
 
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:MyGame.Splitter"/> class.
+		/// </summary>
+		/// <param name="x">The x coordinate.</param>
+		/// <param name="y">The y coordinate.</param>
         public Splitter(float x, float y) : base(x, y, 1, 5, 1)
         {
             _speed = 2;
@@ -17,6 +29,9 @@ namespace MyGame
         }
 
 
+		/// <summary>
+		/// Draw this instance.
+		/// </summary>
         public override void Draw()
         {
             SwinGame.FillCircle(Color.Blue, _position[0], _position[1], _size);
@@ -24,12 +39,19 @@ namespace MyGame
         }
 
 
+		/// <summary>
+		/// Update this instance.
+		/// </summary>
         public override void Update()
         {
             throw new NotImplementedException();
         }
 
 
+		/// <summary>
+		/// Update the splitter for its cool timer, movement and split timer.
+		/// </summary>
+		/// <param name="_track">Track.</param>
         public override void Update(Track _track)
         {
             CoolTimer();

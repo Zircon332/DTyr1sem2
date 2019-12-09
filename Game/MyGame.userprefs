@@ -5,16 +5,16 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\GameMain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\Scene.cs">
     <Files>
-      <File FileName="src\GameMain.cs" Line="60" Column="37" />
-      <File FileName="ShapeTest.cs" Line="68" Column="31" />
-      <File FileName="Drawing.cs" Line="79" Column="7" />
-      <File FileName="DrawingTest.cs" Line="36" Column="37" />
-      <File FileName="src\Shape.cs" Line="38" Column="3" />
-      <File FileName="Rectangle.cs" Line="38" Column="18" />
-      <File FileName="Circle.cs" Line="37" Column="4" />
-      <File FileName="Line.cs" Line="11" Column="3" />
+      <File FileName="src\UI\SideBar.cs" Line="144" Column="8" />
+      <File FileName="src\UI\TopBar.cs" Line="42" Column="7" />
+      <File FileName="src\UI\UIButton.cs" Line="68" Column="7" />
+      <File FileName="src\UI\UIObject.cs" Line="32" Column="3" />
+      <File FileName="src\UI\UIText.cs" Line="60" Column="7" />
+      <File FileName="src\GameMain.cs" Line="22" Column="1" />
+      <File FileName="src\GameStates.cs" Line="9" Column="6" />
+      <File FileName="src\Scene.cs" Line="21" Column="48" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 </Properties>

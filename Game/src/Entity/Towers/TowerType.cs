@@ -4,8 +4,11 @@ using SwinGameSDK;
 
 namespace MyGame
 {
+	/// <summary>
+	/// Tower type.
+	/// </summary>
     public enum TowerType
     {
-        Shooter, Freeze, Spike
+        Shooter, Freeze
     }
 }

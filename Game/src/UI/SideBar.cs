@@ -6,17 +6,47 @@ namespace MyGame
 {
 	public class SideBar : UIObject
 	{
+		/// <summary>
+		/// The shop text.
+		/// </summary>
         private UIText _shopText;
-        private Color _background;
-        private UIButton _buyShooterButton;
-        private UIButton _buyFreezeButton;
-        private UIButton _sellTowerButton;
-        private UIButton _upgradeShooter1Button;
-        private UIButton _upgradeShooter2Button;
-        private UIButton _upgradeFreeze1Button;
-        private UIButton _upgradeFreeze2Button;
+        /// <summary>
+        /// The background.
+        /// </summary>
+		private Color _background;
+        /// <summary>
+        /// The buy shooter button.
+        /// </summary>
+		private UIButton _buyShooterButton;
+        /// <summary>
+        /// The buy freeze button.
+        /// </summary>
+		private UIButton _buyFreezeButton;
+        /// <summary>
+        /// The sell tower button.
+        /// </summary>
+		private UIButton _sellTowerButton;
+        /// <summary>
+        /// The upgrade shooter1 button.
+        /// </summary>
+		private UIButton _upgradeShooter1Button;
+        /// <summary>
+        /// The upgrade shooter2 button.
+        /// </summary>
+		private UIButton _upgradeShooter2Button;
+        /// <summary>
+        /// The upgrade freeze1 button.
+        /// </summary>
+		private UIButton _upgradeFreeze1Button;
+        /// <summary>
+        /// The upgrade freeze2 button.
+        /// </summary>
+		private UIButton _upgradeFreeze2Button;
 
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:MyGame.SideBar"/> class, initializes the buttons and text.
+		/// </summary>
         public SideBar() : base (SwinGame.ScreenWidth()-120, 45, 120, SwinGame.ScreenHeight()-45)
         {
             _shopText = new UIText(_x+40, _y+20, 20, 50, "Shop");
@@ -32,6 +62,12 @@ namespace MyGame
         }
 
 
+		/// <summary>
+		/// Update the buttons.
+		/// </summary>
+		/// <param name="towertype">Towertype.</param>
+		/// <param name="selectedTower">Selected tower.</param>
+		/// <param name="points">Points.</param>
         public void Update(ref TowerType towertype, Tower selectedTower, ref int points)
         {
             _buyShooterButton.Hover();
@@ -72,12 +108,20 @@ namespace MyGame
         }
 
 
+		/// <summary>
+		/// Checks the sell tower.
+		/// </summary>
+		/// <returns><c>true</c>, if sell tower was checked, <c>false</c> otherwise.</returns>
         public bool CheckSellTower()
         {
             return _sellTowerButton.CheckClick();
         }
 
 
+		/// <summary>
+		/// Draws the selected tower buttons.
+		/// </summary>
+		/// <param name="selectedTower">Selected tower.</param>
         public void DrawSelectedTowerButtons(Tower selectedTower)
         {
             if (selectedTower != null)
@@ -98,7 +142,9 @@ namespace MyGame
         }
 
        
-
+		/// <summary>
+		/// Draw this instance.
+		/// </summary>
         public void Draw()
         {
             SwinGame.FillRectangle(_background, _x, _y, _width, _height);

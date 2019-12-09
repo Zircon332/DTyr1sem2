@@ -586,21 +586,37 @@ namespace MyGame
 
         // Properties //
 
+		/// <summary>
+		/// Gets the towers.
+		/// </summary>
+		/// <value>The towers.</value>
         public List<Tower> Towers
         {
             get { return _towers; }
         }
 
+		/// <summary>
+		/// Gets the enemies.
+		/// </summary>
+		/// <value>The enemies.</value>
         public List<Enemy> Enemies
         {
             get { return _enemies; }
         }
 
+		/// <summary>
+		/// Gets the health.
+		/// </summary>
+		/// <value>The health.</value>
         public int Health
         {
             get { return _health; }
         }
 
+		/// <summary>
+		/// Gets the projectiles.
+		/// </summary>
+		/// <value>The projectiles.</value>
         public List<Projectile> Projectiles
         {
             get { return _projectiles; }

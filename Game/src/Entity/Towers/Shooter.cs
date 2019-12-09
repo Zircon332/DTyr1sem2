@@ -6,23 +6,71 @@ namespace MyGame
 {
 	public class Shooter : Tower
 	{
+		/// <summary>
+		/// The sniper.
+		/// </summary>
         private bool _sniper;
-        private int _sniperCost;
-        private bool _doubleSpeed;
-        private int _doubleSpeedCost;
+        /// <summary>
+        /// The sniper cost.
+        /// </summary>
+		private int _sniperCost;
+        /// <summary>
+        /// The double speed.
+        /// </summary>
+		private bool _doubleSpeed;
+        /// <summary>
+        /// The double speed cost.
+        /// </summary>
+		private int _doubleSpeedCost;
 
+		/// <summary>
+		/// The angle.
+		/// </summary>
         private float _angle;
-        private int _barrelLength;
-        private int _barrelWidth;
-        private float _pointAx;
-        private float _pointAy;
-        private float _pointBx;
-        private float _pointBy;
-        private float _pointSx;
-        private float _pointSy;
+        /// <summary>
+        /// The length of the barrel.
+        /// </summary>
+		private int _barrelLength;
+        /// <summary>
+        /// The width of the barrel.
+        /// </summary>
+		private int _barrelWidth;
+        /// <summary>
+        /// The point ax.
+        /// </summary>
+		private float _pointAx;
+        /// <summary>
+        /// The point ay.
+        /// </summary>
+		private float _pointAy;
+        /// <summary>
+        /// The point bx.
+        /// </summary>
+		private float _pointBx;
+        /// <summary>
+        /// The point by.
+        /// </summary>
+		private float _pointBy;
+        /// <summary>
+        /// The point sx.
+        /// </summary>
+		private float _pointSx;
+        /// <summary>
+        /// The point sy.
+        /// </summary>
+		private float _pointSy;
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:MyGame.Shooter"/> class.
+		/// </summary>
         public Shooter() : this(200, 200) { }
 
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:MyGame.Shooter"/> class.
+		/// </summary>
+		/// <param name="x">The x coordinate.</param>
+		/// <param name="y">The y coordinate.</param>
         public Shooter(float x, float y) : base(x, y, 10, 100, 0, 100)
         {
             _barrelLength = 20;
@@ -32,8 +80,14 @@ namespace MyGame
             _doubleSpeedCost = 120;
 
             PointTo(0, 0);
-    }
+    	}
 
+
+		/// <summary>
+		/// Upgrade the specified index and points.
+		/// </summary>
+		/// <param name="index">Index.</param>
+		/// <param name="points">Points.</param>
         public override void Upgrade(int index, ref int points)
         {
             if (index == 1)
@@ -59,6 +113,11 @@ namespace MyGame
         }
 
 
+		/// <summary>
+		/// Point the tower to target X,Y.
+		/// </summary>
+		/// <param name="x">The x coordinate.</param>
+		/// <param name="y">The y coordinate.</param>
         public void PointTo(float x, float y)
         {
             _angle = SwinGame.CalculateAngle(_position[0], _position[1], x, y);
@@ -71,12 +130,19 @@ namespace MyGame
         }
 
 
+		/// <summary>
+		/// Gets the angle.
+		/// </summary>
+		/// <returns>The angle.</returns>
         public override float GetAngle()
         {
             return _angle;
         }
 
 
+		/// <summary>
+		/// Draw this instance, draw range if selected, draw barrel with two types depending on upgrade.
+		/// </summary>
         public override void Draw() {
             if (_selected)
             {
@@ -95,6 +161,10 @@ namespace MyGame
             }
         }
 
+
+		/// <summary>
+		/// Updates pointing to enemies and attack timer.
+		/// </summary>
         public override void Update()
         {
             if (_enemiesInRange.Count > 0)

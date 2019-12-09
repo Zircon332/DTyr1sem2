@@ -114,22 +114,38 @@ namespace MyGame
         
         // Property //
 
+		/// <summary>
+		/// Gets or sets the attack timer.
+		/// </summary>
+		/// <value>The attack timer.</value>
         public int AttackTimer
         {
             get { return _attackTimer; }
             set { _attackTimer = value; }
         }
 
+		/// <summary>
+		/// Gets the enemies in range.
+		/// </summary>
+		/// <value>The enemies in range.</value>
         public List<Enemy> EnemiesInRange
         {
             get { return _enemiesInRange; }
         }
 
+		/// <summary>
+		/// Gets the tower cost.
+		/// </summary>
+		/// <value>The tower cost.</value>
         public int TowerCost
         {
             get { return _towerCost; }
         }
 
+		/// <summary>
+		/// Gets or sets a value indicating whether this <see cref="T:MyGame.Tower"/> is selected.
+		/// </summary>
+		/// <value><c>true</c> if selected; otherwise, <c>false</c>.</value>
         public bool Selected
         {
             get { return _selected; }

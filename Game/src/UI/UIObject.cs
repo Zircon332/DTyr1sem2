@@ -6,13 +6,37 @@ namespace MyGame
 {
 	public abstract class UIObject
 	{
+		/// <summary>
+		/// The x.
+		/// </summary>
         protected float _x;
-        protected float _y;
-        protected int _width;
-        protected int _height;
+        /// <summary>
+        /// The y.
+        /// </summary>
+		protected float _y;
+        /// <summary>
+        /// The width.
+        /// </summary>
+		protected int _width;
+        /// <summary>
+        /// The height.
+        /// </summary>
+		protected int _height;
 
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:MyGame.UIObject"/> class.
+		/// </summary>
         public UIObject() : this(10, 10, 10, 10) { }
 
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="T:MyGame.UIObject"/> class.
+		/// </summary>
+		/// <param name="x">The x coordinate.</param>
+		/// <param name="y">The y coordinate.</param>
+		/// <param name="width">Width.</param>
+		/// <param name="height">Height.</param>
         public UIObject(float x, float y, int width, int height)
         {
             _x = x;
